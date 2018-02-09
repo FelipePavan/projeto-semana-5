@@ -8,10 +8,24 @@
 
 <ion-content>
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
+
     <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+      <ion-input [(ngModel)]='park.nome' type="text" placeholder="Nome"></ion-input>
     </ion-item>
+  
+    <ion-item>
+      <ion-input [(ngModel)]='park.endereco' type="text" placeholder="Endereço"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]='park.preco' type="text" placeholder="Preço"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]='park.foto' type="text" placeholder="url foto"></ion-input>
+    </ion-item>
+    
+  
   </ion-list>
+  <button ion-button (click)='add()'>Adicione o estacionamento</button>
+  <button ion-button (click)='get()'>Teste</button>
+
 </ion-content>
