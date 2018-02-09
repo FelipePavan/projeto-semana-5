@@ -5,13 +5,41 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <h2>Distância</h2>
+  <ion-badge item-end>{{distancia}}</ion-badge>
+  <ion-item>
+    <ion-range min="0" max="3" [(ngModel)]="distancia" color="secondary">
+      <ion-label range-left>0km</ion-label>
+      <ion-label range-right>3km</ion-label>
+    </ion-range>
+  </ion-item>
+  
+  <ion-item>
+    <button ion-button>Procurar Onde Parar</button>
+  </ion-item>
+  
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="assets/imgs/park-logo.png">
+      </ion-avatar>
+      <h2>Estacionamento 1</h2>
+      <p>XXX.X metros de distância</p>
+    </ion-item>
+  
+    <img src="assets/imgs/foto-estacionamento.jpeg">
+  
+    <ion-card-content>
+      <p>Diária: R$ XX,XX</p>
+    </ion-card-content>
+  
+    <div ion-button icon-left clear small>
+      <ion-icon name="text"></ion-icon>
+      <div>4 Comments</div>
+    </div>
+
+  </ion-card>
+
+
 </ion-content>
