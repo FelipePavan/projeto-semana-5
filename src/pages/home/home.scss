@@ -1,4 +1,39 @@
+$primary-color:red;
+
+
 page-home {
 
+    font-family: 'Exo 2', sans-serif;
+    .imagemGrande{
+        margin: 5% 0;
+    }
+    .procurar{
+        background-color: $primary-color !important;
+        width: 100%;
+        font-family: 'Fugaz One', cursive;
 
+    }
+
+    ion-badge{
+        background-color: $primary-color !important;
+        font-family: 'Fugaz One', cursive;
+        padding-top: 12px;
+
+    }
+    ion-card-content{
+        padding: 3% 0 1% 0 !important;
+    }
+    .preco{
+        font-weight: bold;
+        padding: 0 0.9em;
+    }
+    .item-md.item-block .item-inner{
+        padding: 0;
+    }
+
+    .titulo{
+        display: flex; 
+        justify-content: space-between;
+
+    }
 }
