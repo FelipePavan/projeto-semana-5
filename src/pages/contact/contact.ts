@@ -16,22 +16,21 @@ export class ContactPage {
     ne: 0,
     nome:'',
     endereco:  '',
-    preco: 0,
+    preco: '',
     foto: '',
     comentarios: []
   }
 
 
   add () {  
-    this.service.getParks();
-    this.park.ne = (this.service.parks.length + 1);
+    
     this.service.addPark(this.park);
 
     this.park = {
       ne: 0,
       nome:'',
       endereco:  '',
-      preco: 0,
+      preco: '',
       foto: '',
       comentarios: []
     }
@@ -41,6 +40,8 @@ export class ContactPage {
   get() {
     this.service.getParks();
   }
+  // locate() {
+  //   this.service.getGeolocation();
+  // }
 
-  
 }

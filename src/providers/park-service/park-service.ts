@@ -15,7 +15,7 @@ export class ParkServiceProvider {
     console.log('Hello ParkServiceProvider Provider');
   }
 
-  apiUrl = "http://localhost:3000";
+  apiUrl = "http://159.203.45.167:3000";
 
   parks = [];
 
@@ -31,8 +31,7 @@ export class ParkServiceProvider {
       }) 
     }
   }
-  // string = "200"
-  // numero = Number(this.string);
+
 
   getParks () {
     this.http.get<any>(this.apiUrl + '/estacionamentos').subscribe((resposta) => {
@@ -47,5 +46,20 @@ export class ParkServiceProvider {
       console.log('park updated');
     });
   }
+
+
+
+  // getGeolocation (park) {
+    
+  //   console.log(park);
+    
+    
+  //   this.http.get<any>(`https://maps.googleapis.com/maps/api/geocode/json?address=${park.endereco.numero}+${park.endereco.rua},+${park.endereco.cidade},+${park.endereco.estado}&key=AIzaSyCfhWkrDHxzTkxymVOBS-CGGbT5Md1nzeU`).subscribe((resposta) => {
+      
+  //     console.log(resposta.results[0].geometry.location.lat);
+  //     console.log(resposta.results[0].geometry.location.lng);
+  //       })
+  // }
+  
 
 }
