@@ -5,12 +5,12 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="título">
+  <div class="titulo">
     <h1>Distância</h1>
-    <ion-badge item-end>{{dist}} km</ion-badge>
+    <ion-badge item-end>{{distancia}} km</ion-badge>
   </div>
   <ion-item>
-    <ion-range min="0" max="300" [(ngModel)]="distancia" color="secondary">
+    <ion-range min="0" max="3" [(ngModel)]="distancia" color="secondary">
       <ion-label range-left>0km</ion-label>
       <ion-label range-right>3km</ion-label>
     </ion-range>
@@ -33,10 +33,10 @@
         <p>XXX.X metros de distância</p>
       </ion-item>
       
-      <img src="{{park.foto}}">
+      <img class="imagemGrande" src="{{park.foto}}">
       
       <ion-card-content>
-        <p>Diária: {{park.preco}}</p>
+        <p class="preco">Diária: R${{park.preco}}</p>
       </ion-card-content>
       
       <div ion-button icon-left clear small>
