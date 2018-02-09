@@ -14,8 +14,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  dadosDoEstacionas;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.dadosDoEstacionas = this.navParams.get('park');
   }
 
   ionViewDidLoad() {
