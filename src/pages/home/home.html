@@ -23,21 +23,20 @@
 
   <div *ngIf = mostrar>
     
-    <ion-card>
-    <!-- *ngFor = "let park of service.parks" (click)="irParaDetail(park)"> -->
+    <ion-card *ngFor = "let park of service.parks" (click)="irParaDetail(park)">
       
       <ion-item>
         <ion-avatar item-start>
           <img src="assets/imgs/park-logo.png">
         </ion-avatar>
-        <h2>XXX</h2>
+        <h2>{{park.nome}}</h2>
         <p>XXX.X metros de distância</p>
       </ion-item>
       
-      <img src="assets/imgs/foto-estacionamento.jpeg">
+      <img src="{{park.foto}}">
       
       <ion-card-content>
-        <p>Diária: xxx</p>
+        <p>Diária: {{park.preco}}</p>
       </ion-card-content>
       
       <div ion-button icon-left clear small>

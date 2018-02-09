@@ -22,7 +22,7 @@ export class HomePage {
   mostrar = false;
 
   procEstacionamento(){ 
-
+    this.service.getParks ()
 
     if(this.mostrar){
       this.mostrar = false
