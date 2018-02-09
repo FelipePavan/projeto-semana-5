@@ -6,7 +6,7 @@ const ObjectID = require('mongodb').ObjectID;
 
 const app = express();
 
-app.use(expressMongoDb('mongodb://localhost/appApi'));
+app.use(expressMongoDb('mongodb://http://159.203.45.167/appApi'));
 app.use(bodyParser.json());
 app.use(cors());
 

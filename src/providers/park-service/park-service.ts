@@ -15,7 +15,7 @@ export class ParkServiceProvider {
     console.log('Hello ParkServiceProvider Provider');
   }
 
-  apiUrl = "http://localhost:3000";
+  apiUrl = "http://159.203.45.167:3000";
 
   parks = [];
 
