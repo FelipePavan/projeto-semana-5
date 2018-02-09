@@ -1,7 +1,15 @@
-page-contact {
+$primary-color:red;
 
+page-contact {
+    font-family: 'Exo 2', sans-serif;
     .buttons {
         display: flex;
         justify-content: space-around;
+    }
+    .procurar{
+        background-color: $primary-color !important;
+        width: 100%;
+        font-family: 'Fugaz One', cursive;
+
     }
 }
