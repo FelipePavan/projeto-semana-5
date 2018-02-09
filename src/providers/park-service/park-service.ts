@@ -31,13 +31,21 @@ export class ParkServiceProvider {
       }) 
     }
   }
+  // string = "200"
+  // numero = Number(this.string);
 
   getParks () {
     this.http.get<any>(this.apiUrl + '/estacionamentos').subscribe((resposta) => {
       this.parks = resposta;
-      console.log(resposta);
+      console.log(this.parks.length);
         })
   }
 
+  updatePark (park) {
+
+    this.http.post((this.apiUrl + '/update'), park).subscribe((resposta) => {
+      console.log('park updated');
+    });
+  }
 
 }

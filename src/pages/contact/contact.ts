@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { HttpClient } from '@angular/common/http';
 import { ParkServiceProvider } from '../../providers/park-service/park-service';
+
 
 @Component({
   selector: 'page-contact',
@@ -9,10 +9,11 @@ import { ParkServiceProvider } from '../../providers/park-service/park-service';
 })
 export class ContactPage {
 
-  constructor(public navCtrl: NavController, public http: HttpClient, public service: ParkServiceProvider) {
+  constructor(public navCtrl: NavController, public service: ParkServiceProvider) {
 
   }
   park = {
+    ne: 0,
     nome:'',
     endereco:  '',
     preco: 0,
@@ -22,10 +23,12 @@ export class ContactPage {
 
 
   add () {  
-    
+    this.service.getParks();
+    this.park.ne = (this.service.parks.length + 1);
     this.service.addPark(this.park);
 
     this.park = {
+      ne: 0,
       nome:'',
       endereco:  '',
       preco: 0,

@@ -1,11 +1,20 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Atualizar Preço
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+
+    <ion-item>
+      <ion-input [(ngModel)]='park.ne' type="number" placeholder="ID do estacionamento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]='park.preco' type="number" placeholder="Novo Preço"></ion-input>
+    </ion-item>
+
+    <button ion-button (click)='update()'>Atualizar Preço</button>
 
 </ion-content>
